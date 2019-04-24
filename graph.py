@@ -15,12 +15,15 @@ class graph:
             return None
     
     def add_edge(self, u, v, weight):
-        if find_edge is None:
+        if self.find_edge(u, v) is None:
             self.numEdges += 1
             self.graph[u][v] = weight
             return True
         else:
             return False
+
+    def find_negative_cycle(self):
+        
     
     def print_matrix(self):
         for i in range(len(self.graph)):
